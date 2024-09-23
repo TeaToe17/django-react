@@ -9,9 +9,8 @@ from rest_framework.permissions import IsAuthenticated,AllowAny
 
 from .serializers import userSerializer, NoteSerializer
 
-def index(request, path=''):
-    # This serves the index.html for any frontend URL (except Django's API endpoints)
-    return render(request, 'dist/index.html')
+# def index(request, path=''):
+#     return render(request, 'dist/index.html')
 
 class NoteListCreate(generics.ListCreateAPIView):
     serializer_class = NoteSerializer

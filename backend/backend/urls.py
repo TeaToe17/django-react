@@ -30,7 +30,7 @@ urlpatterns = [
     path("api_auth/",include("rest_framework.urls")), 
     path("api/",include("api.urls")),
     # path("/", index, name="home"),
-    re_path(r'^(?:.*)/?$', index),
+    # re_path(r'^(?:.*)/?$', index),
 ]
 
 urlpatterns += staticfiles_urlpatterns()
