@@ -19,7 +19,7 @@ from django.urls import path, include, re_path
 from api.views import CreateUserView 
 from rest_framework_simplejwt.views import TokenObtainPairView,TokenRefreshView
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
-
+from django.views.generic import TemplateView
 
 
 urlpatterns = [
@@ -29,8 +29,8 @@ urlpatterns = [
     path('api/token/refresh/',TokenRefreshView.as_view(),name="refresh"),
     path("api_auth/",include("rest_framework.urls")), 
     path("api/",include("api.urls")),
-    # path("/", index, name="home"),
-    # re_path(r'^(?:.*)/?$', index),
+    path('', TemplateView.as_view(template_name='dist/index.html')),
+    path('<path:resource>', TemplateView.as_view(template_name='dist/index.html')),
 ]
 
 urlpatterns += staticfiles_urlpatterns()
