@@ -16,7 +16,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include, re_path
-from api.views import CreateUserView , index
+from api.views import CreateUserView 
 from rest_framework_simplejwt.views import TokenObtainPairView,TokenRefreshView
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
