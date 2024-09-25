@@ -177,7 +177,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CORS_ALLOW_ALL_ORIGINS = False
 CORS_ALLOWED_ORIGINS = [
-    "https://your-frontend.vercel.app", 
+    "https://django-reactfrontend.vercel.app", 
 ]
 
 CORS_ALLOW_CREDENTIALS = True
