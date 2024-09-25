@@ -1,5 +1,5 @@
 import react from "react"
-import { BrowserRouter, Routes, Route, Navigate,  HashRouter } from "react-router-dom"
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom"
 import Login from "./pages/Login"
 import Home from "./pages/Home"
 import Register from "./pages/Register"
@@ -19,7 +19,7 @@ function RegisterAndLogout() {
 function App() {
 
   return (
-    <HashRouter>
+    <BrowserRouter>
       <Routes>
         <Route
           path="/"
@@ -34,7 +34,7 @@ function App() {
         <Route path="/register" element={<RegisterAndLogout/>} />
         <Route path="*" element={<NotFound/>} />
       </Routes>
-    </HashRouter>
+    </BrowserRouter>
   )
 }
 export default App

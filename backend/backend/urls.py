@@ -29,8 +29,8 @@ urlpatterns = [
     path('api/token/refresh/',TokenRefreshView.as_view(),name="refresh"),
     path("api_auth/",include("rest_framework.urls")), 
     path("api/",include("api.urls")),
-    path('', TemplateView.as_view(template_name='dist/index.html')),
-    path('<path:resource>', TemplateView.as_view(template_name='dist/index.html')),
+    # path('', TemplateView.as_view(template_name='dist/index.html')),
+    # path('<path:resource>', TemplateView.as_view(template_name='dist/index.html')),
 ]
 
 urlpatterns += staticfiles_urlpatterns()
